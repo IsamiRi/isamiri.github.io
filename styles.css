@@ -8,7 +8,7 @@
 }
 
 body {
-    background-color: black;
+    background-color: var(--arc-palette-background, black);
     height: 100vh;
     margin: 0;
     display: flex;
@@ -50,43 +50,43 @@ h1 {
 }
 
 .card.risha {
-    background: black;
-            color: white;
-            border: white 5px solid;
+    background: transparent;
+            color: var(--arc-palette-foregroundPrimary, white);
+            border: var(--arc-palette-foregroundPrimary, white) 5px solid;
             
 }
 
 .card.risha:hover {
-    background-color: white;
-    color: black;
+    background-color: var(--arc-palette-foregroundPrimary, white);
+    color: var(--arc-palette-background, black);
 }
 
 .card.logo {
-    --logo-bg: #F06464;
-    --logo-color: white;
+    --logo-bg: var(--arc-background-simple-color, var(--arc-background-gradient-color0, #F06464));
+    --logo-color: var(--arc-palette-foregroundPrimary, white);
     background-color: var(--logo-bg);
 }
 
 .card.tg, .card.twitch {
     cursor: pointer;
-    color: white;
+    color:  var(--arc-palette-foregroundPrimary, white);
 }
 
 .card.tg {
-    background-color: #27A7E7;
+    background-color: var(--arc-background-gradient-color1, #27A7E7);
 }
 
 .card.twitch {
-    background-color: #9146FF;
+    background-color: var(--arc-background-gradient-overlay-color1, #9146FF);
 }
 
 .card.logo:hover {
-    --logo-bg: white;
-    --logo-color: #F06464;
+    --logo-bg:  var(--arc-palette-foregroundPrimary, white);
+    --logo-color: var(--arc-palette-minContrastColor, #f06464)!important;
 }
 
 .card.tg:hover, .card.twitch:hover {
-    background-color: white;
+    background-color:  var(--arc-palette-foregroundPrimary, white);
     color: black;
 }
 
@@ -105,8 +105,8 @@ a.buttonlink.wfl {
 }
 
 .emae {
-    background: #f06464!important;
-    border-color: #f06464!important;;
+    background: var(--arc-palette-minContrastColor, #f06464)!important;
+    border-color: var(--arc-palette-minContrastColor, #f06464)!important;
 }
 
 .piska {
