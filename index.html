@@ -1,5 +1,80 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
-<title>Redirecting...</title>
-<meta http-equiv="refresh" content="0; URL=https://isamirisha.carrd.co/">
-<link rel="canonical" href="https://isamirisha.carrd.co/">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risha</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/bold/style.css"
+    />
+    <script>
+        let clickCounter = 0
+        
+        function clickLogoTrigger() {
+            clickCounter += 1
+            hue = 231
+            if (clickCounter==3) {
+                setInterval(()=>{
+                    hue += 1
+                    document.querySelector("body").style.filter = `hue-rotate(${hue}deg) brightness(1.3)`
+                }, 1)
+            }
+        }
+        
+        window.onload = ()=>{
+            setInterval(()=>{
+                if (Number(hey.style.marginTop.slice(0, hey.style.marginTop.length-2)) <= -400.95) {
+                    hey.style.marginTop = "0px"
+                } else {
+                    hey.style.marginTop = Number(hey.style.marginTop.slice(0, hey.style.marginTop.length-2))-44.55 + "px"
+                }
+            }, 3500)
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <header>
+            <img src="https://static.isamiri.ru/logo.svg" alt="logo" onclick="clickLogoTrigger()">
+        </header>
+        <main>
+            <div class="headerContainer">
+                <div class="hpc" style="
+                    height: 44px;
+                    overflow: hidden;
+                "><img id="hey" src="https://static.isamiri.ru/hello_new.svg" style="
+                    width: 730px;
+                    object-position: 0px 0px;
+                    margin-top: 0px;
+                    transition: all 0.3s ease-in-out;
+                "></div>
+                <h1 style="margin-top: 0px" class="hmobile">Hey, I am Isami! <3</h1>
+                <p>Also known as Risha</p>
+            </div>
+            <div class="cards">
+                <div class="beforebuttons">
+                    <div class="buttons">
+                        <a href="https://t.me/rishatutpishe">
+                            <i class="ph-bold ph-telegram-logo"></i>
+                        </a>
+                        <a href="https://x.com/isamirivers">
+                            <i class="ph-bold ph-twitter-logo"></i>
+                        </a>
+                        <a href="https://twitch.tv/isamirivers">
+                            <i class="ph-bold ph-twitch-logo"></i>
+                        </a>
+                        <a href="mailto:me@isamiri.ru">
+                            e-mail
+                        </a>
+                    </div>
+                </div>
+                <p style="font-size: 20px;">If you have any request for me, please write to me by email, I will answer you quickly</p>
+            </div>
+        </main>
+        <div style="height: 100%; margin-top: -40px;display:none;"></div>
+    </div>
+</body>
+</html>

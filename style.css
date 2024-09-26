@@ -1,0 +1,353 @@
+@import url('https://cdn.jsdelivr.net/gh/isamirivers/IsamiRi-Display@main/stylesheet.css');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;600&display=swap');
+@import url('https://cdn.jsdelivr.net/gh/isamirivers/IsamiRi-Display@main/stylesheetArmenian.css');
+@import url('https://fonts.cdnfonts.com/css/roboto-flex');
+
+:root {
+    --display-mac: -apple-system, BlinkMacSystemFont, "Roboto Flex", sans-serif;
+    --set-h1: "wght" 350, "wdth" 132, "XTRA" 540;
+    --set-h2: "wght" 589, "wdth" 132, "XTRA" 540;
+    --set-button: "wght" 589, "wdth" 132, "XTRA" 540;
+    --set-card-header: "wght" 589, "wdth" 132, "XTRA" 540;
+    --set-ul: "wght" 249, "wdth" 122, "XTRA" 520;
+    
+    
+    --isamiri-display: "IsamiRi Display", "IsamiRi Display Armenian", sans-serif;
+    --ibm: "IBM Plex Mono", sans-serif;
+    --transparent-white: #25232399;
+    --white: #101010;
+    --red: #F06464;
+    --dark: white;
+    --card-bg: #e4dfdf;
+}
+
+@media (prefers-color-scheme: light) {
+    #hey {
+        filter: invert();
+    }
+    .invert_on_light {
+        filter: invert();
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --display-mac: -apple-system, BlinkMacSystemFont, "Roboto Flex", "IBM Plex Mono", sans-serif;
+        --set-h1: "wght" 350, "wdth" 132, "XTRA" 540;
+        --set-h2: "wght" 589, "wdth" 132, "XTRA" 540;
+        --set-button: "wght" 589, "wdth" 132, "XTRA" 540;
+        --set-card-header: "wght" 589, "wdth" 132, "XTRA" 540;
+        --set-ul: "wght" 249, "wdth" 122, "XTRA" 520;
+        
+        --isamiri-display: "IsamiRi Display", "IsamiRi Display Armenian", sans-serif;
+        --ibm: "IBM Plex Mono", sans-serif;
+        --transparent-white: rgba(233, 233, 233, 0.60);
+        --white: #E9E9E9;
+        --red: #F06464;
+        --dark: #101010;
+        --card-bg: #242426;
+    }
+}
+
+@media (min-width: 730px) {
+    .hmobile {
+        display: none;
+    }
+}
+
+@media (max-width: 730px) {
+    .hpc {
+        display: none;
+    }
+    div.beforebuttons > * > * {
+        flex-grow: 1;
+    }
+    div.info > div:nth-child(6) {
+        max-width: 100%;
+    }
+}
+
+.languages > *:not(.active) {
+    display: none;
+}
+
+@keyframes blur {
+  from {
+    filter: blur(10px);
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    filter: blur(0px);
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes bodybefore {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+body > div > * {
+    opacity: 0;
+    animation: blur 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    transition: opacity 1s;
+    font-family: var(--display-mac);
+}
+
+body::before {
+    content: "";
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0;
+    background-image: url(https://static.isamiri.ru/bg.svg);
+    animation: bodybefore 6s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    position: fixed;
+}
+
+body {
+    background: var(--dark);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    display: flex; 
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    height: 100vh;
+    margin: 0;
+    color: var(--white);
+    cursor: url(https://cdn.discordapp.com/attachments/706221390289961101/1121803870696382534/Vector_1.svg), auto;
+}
+
+body > div {
+    margin: 20px 10px 0px 10px;
+    display: flex;
+    max-width: 780px;
+    padding: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
+    align-self: stretch;
+    width: 100%;
+    cursor: url(https://cdn.discordapp.com/attachments/706221390289961101/1121803870696382534/Vector_1.svg), auto;
+}
+
+header {
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    width: 100%;
+}
+
+header > .languages {
+    display: flex;
+    align-items: center;
+    gap: 10px 30px;
+    justify-content: end;
+    flex-wrap: wrap;
+}
+
+.languages > * {
+    font-family: var(--isamiri-display);
+    font-size: 42px;
+    font-style: normal;
+    font-weight: bold;
+    user-select: none;
+    color: var(--white);
+}
+
+.languages > *:not(.active) {
+    color: var(--transparent-white);
+    cursor: url(https://cdn.discordapp.com/attachments/706221390289961101/1121805139037130823/Group_10.svg), pointer;
+}
+
+div.headerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+div.headerContainer > h1 {
+    font-family: var(--display-mac);
+    font-variation-settings: var(--set-h1);
+    font-size: 48px;
+    font-style: normal;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+div.headerContainer > p {
+    color: var(--transparent-white);
+    font-family: var(--display-mac);
+    font-variation-settings: var(--set-h2);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 0;
+}
+
+main > .cards {
+    display: flex;
+    max-width: 851px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0px;
+    align-self: stretch;
+}
+
+.cards > .info > div > b {
+    font-family: var(--display-mac);
+    font-variation-settings: var(--set-card-header);
+}
+
+.cards > .info > div > ul {
+    font-family: var(--display-mac);
+    font-variation-settings: var(--set-ul);
+}
+
+.beforebuttons {
+    display:flex;gap:10px;flex-direction:column;
+}
+
+.buttons {
+    display: flex;
+    align-items: stretch;
+    align-content: flex-start;
+    gap: 10px 7px;
+    align-self: stretch;
+    flex-wrap: wrap;
+}
+
+.buttons > a {
+    display: flex;
+    padding: 15px 30px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 50px;
+    border: var(--red) 4px solid;
+    color: var(--red);
+
+    font-family: var(--ibm);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: var(--display-mac);
+    font-variation-settings: var(--set-button);
+}
+
+.buttons > a:hover {
+    border-radius: 25px;
+    -webkit-filter: brightness(1.3);
+    box-shadow: 0px 0px 55px var(--red);
+    background: var(--red);
+    color: var(--dark);
+}
+
+.buttons > a:active {
+    border-radius: 10px;
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+}
+
+a {
+    transition: border-radius 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.5s ease-in-out, filter 0.5s ease-in-out, -webkit-filter 0.5s ease-in-out;
+    text-decoration: none;
+    cursor: url(https://cdn.discordapp.com/attachments/706221390289961101/1121805139037130823/Group_10.svg), pointer;
+}
+
+a:hover {
+    filter: brightness(1.3);
+}
+
+.cards > .info {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    align-self: stretch;
+    flex-wrap: wrap;
+    max-width: 850px;
+    font-size: 24px;
+}
+
+.cards > .info > div {
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 20px;
+    flex-grow: 1;
+    outline: 4px solid var(--white);
+}
+
+.cards > .info > div {
+    font-family: var(--ibm);
+}
+
+.cards > .info > div > ul {
+    font-weight: 300;
+    margin: 0px;
+    padding: 0;
+    padding-left: 25px;
+}
+
+li > a {
+    color: var(--red);
+    cursor: url(https://cdn.discordapp.com/attachments/706221390289961101/1121805139037130823/Group_10.svg), pointer;
+}
+
+footer > img {
+    width: 100%;
+    max-width: 500px;
+    user-select: none;
+    margin-bottom: 30px;
+}
+
+footer {
+    display: flex;
+}
+
+div.info > div:nth-child(6) {
+    max-width: 370px;
+}
+
+div.info > div:nth-child(6) > ul {
+    max-width: 216px;
+}
+
+body > div > main > div.cards > div.info > div:nth-child(5) > ul {
+    max-width: 190px;
+}
+
+.ph-bold {
+font-size: 48px;
+}
+
